@@ -50,6 +50,7 @@ Write some code that takes an array of numbers and outputs an array that changes
 
 */
 
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const str = " ";
 for (var i = 0; i < array; i++) {
     str = array[i].toString();
@@ -60,3 +61,40 @@ for (var i = 0; i < array; i++) {
     else
         array[i] = 1 * str
 }
+
+
+/*
+
+Challenge #3:
+Find the unique number
+
+Given an array of more than 3 numbers where all numbers are equal except for one. Display the one unique number!
+*/
+
+function challenge3(input) {
+    const unique = findUnique(input);
+    writeToDom(unique, "challenge-3")
+}
+
+function findUnique(array) {
+    array.sort(function (a, b) {
+        return a - b;
+    });
+    if (array[0] === array[1]) {
+        return array.pop();
+    } else {
+        return array[0];
+    }
+}
+var input3 = [10, 0, 0, 0, 0, 0, 0, 0.55, 0, 0];
+challenge3(input3);
+
+/*
+
+Challenge #4:
+Lost Without a Map
+Given an array of any number of integers display the array with each value doubled.
+
+*/
+
+
