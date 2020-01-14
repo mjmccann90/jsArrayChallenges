@@ -1,5 +1,7 @@
 /*
-Challenge #1: Highest Scoring Word
+Challenge #1:
+Highest Scoring Word
+
 Given a string of 2 words, find the highest scoring word. Each letter of a word scores points according to it's position in the alphabet: a = 1, b = 2, c = 3 etc. All letters will be lowercase there will be no punctuation. Display (id='challenge-1') the word that is the highest scoring. If two words score the same, display the word that appears earliest in the original string.
 */
 
@@ -35,3 +37,26 @@ function findBestTaco(tacos) {
     return bestTaco;
 }
 challenge1("jumbo shrimp");
+
+
+/*
+
+Challenge #2:
+Sorting on planet Twisted-3-7
+
+There is a planet... in a galaxy far far away. It is exactly like our planet, but it has one difference: The values of the digits 3 and 7 are twisted. Our 3 means 7 and 7 means 3.
+
+Write some code that takes an array of numbers and outputs an array that changes any 3s to 7s and any 7s to 3s.
+
+*/
+
+const str = " ";
+for (var i = 0; i < array; i++) {
+    str = array[i].toString();
+    if (str.includes(3))
+        array[i] = 1 * (str.replace(/[3]/g, [7]));
+    else if (str.includes(7))
+        array[i] = 1 * (str.replace(/[7]/g, 3))
+    else
+        array[i] = 1 * str
+}
