@@ -98,3 +98,17 @@ Given an array of any number of integers display the array with each value doubl
 */
 
 
+function challenge4(input) {
+    let doubledDogs = double(input);
+    writeToDom(doubledDogs, "challenge-4");
+}
+
+function double(integers) {
+    let answer = integers.map(doubledTaco);
+    return answer;
+}
+
+function doubledTaco(article) {
+    return article * 2;
+}
+challenge4([1, 2, 3, 19, 5, 6, 909, 8, 9, 100000087654334])
