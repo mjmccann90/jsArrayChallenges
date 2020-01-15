@@ -112,3 +112,24 @@ function doubledTaco(article) {
     return article * 2;
 }
 challenge4([1, 2, 3, 19, 5, 6, 909, 8, 9, 100000087654334])
+
+/*
+
+Challenge #5:
+Array.diff
+
+Given two arrays remove all values from array1 that are present in array2. Display the final results of array1
+
+*/
+
+function challenge5(array1, array2) {
+    let result = arrayFilter(array1, array2);
+    writeToDom(result, "challenge-5");
+}
+
+function arrayFilter(one, two) {
+    return one.filter(function (item) {
+        return !two.includes(item);
+    });
+}
+challenge5([1, 2, 3, 4, 5, 6, 8, 10, 12], [1, 2, 3, 5, 7, 9])
