@@ -133,3 +133,45 @@ function arrayFilter(one, two) {
     });
 }
 challenge5([1, 2, 3, 4, 5, 6, 8, 10, 12], [1, 2, 3, 5, 7, 9])
+
+/*
+
+Challenge #7:
+English beggars
+
+Given an array of values and an amount of beggars, you are supposed to return an array with the sum of what each beggar brings home, assuming they all take regular TURNS, from the first to the last. Not all beggars have to take the same offers - ie the length of the array is not a multiple of the number of beggers.
+
+*/
+
+var numBeggers = 2;
+var offerings = [1, 2, 3, 4, 5];
+
+var arrayOne = [];
+var arrayTwo = [];
+var value1 = 0;
+var value2 = 0;
+var answer = [];
+
+for (var i = 0; i < offerings.length; i += numBeggers) {
+    arrayOne.push(offerings[i]);
+}
+
+for (var m = 0; m < arrayOne.length; m++) {
+    value1 += arrayOne[m];
+    var removeElement = offerings.indexOf(arrayOne[m]);
+    offerings.splice(removeElement, 1)
+}
+
+for (var a = 0; a < offerings.length; a += (numBeggers - 1)) {
+    arrayTwo.push(offerings[a]);
+}
+
+for (var r = 0; r < arrayTwo.length; r++) {
+    value2 += arrayTwo[r];
+    var removeElement = offerings.indexOf(arrayTwo[r]);
+    offerings.splice(removeElement, 1);
+}
+
+answer.push(value1, value2);
+var tacoString = '<h3>' + answer + '</h3>';
+document.getElementById("challenge-7").innerHTML = tacoString;
