@@ -200,3 +200,31 @@ for (var r = 0; r < arrayTwo.length; r++) {
 answer.push(value1, value2);
 var tacoString = '<h3>' + answer + '</h3>';
 document.getElementById("challenge-7").innerHTML = tacoString;
+
+/*
+
+Challenge #8:
+Dashatize it
+
+Given a number, display a string with dash'-'marks before and after each odd integer,but do not begin or end the string with a dash mark.
+
+*/
+
+var test1 = 274;
+var test2 = 6815;
+var strTaco = test1.toString();
+var strSpliter = strTaco.split('');
+var tacoArray = [];
+
+for (var i = 0; i < strSpliter.length; i++) {
+    if (strSpliter[i] % 2 === 0) {
+        tacoArray.push(strSpliter[i])
+    } else if (i < (strSpliter.length - 1)) {
+        tacoArray.push('-' + strSpliter[i] + '-');
+    } else {
+        tacoArray.push(strSpliter[i]);
+    }
+}
+
+tacoArray = tacoArray.join('');
+document.getElementById("challenge-8").innerHTML = tacoArray;
