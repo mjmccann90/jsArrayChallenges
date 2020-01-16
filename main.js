@@ -248,3 +248,24 @@ var scheme = prefix.join('') + '-' + lineNum.join('');
 phoneNumber = areaCode + scheme;
 
 document.getElementById("challenge-9").innerHTML = phoneNumber;
+
+/*
+
+Challenge #10:
+Bowling Pins
+
+We are DOM bowling!!!!!
+
+I I I I  # each Pin has a Number:    7 8 9 10
+ I I I                                4 5 6
+  I I                                  2 3
+   I                                    1
+You will get an Array with Numbers: like [3,5,9] Remove those pins from the field and display the remaining pins in the DOM
+
+*/
+
+var pinsInput = [3, 5, 9];
+for (pinsLoop = 0; pinsLoop < pinsInput.length; pinsLoop++) {
+    let pinsKnockedOut = "pin-" + pinsInput[pinsLoop];
+    document.getElementById(pinsKnockedOut).innerHTML = " ";
+}
