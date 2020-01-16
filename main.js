@@ -228,3 +228,23 @@ for (var i = 0; i < strSpliter.length; i++) {
 
 tacoArray = tacoArray.join('');
 document.getElementById("challenge-8").innerHTML = tacoArray;
+
+/*
+
+Challenge #9:
+Create Phone Number
+
+Write some code that accepts an array of 10 integers (between 0 and 9) and displays a string of those numbers in the form of a phone number.
+
+*/
+
+var phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0] // => displays "(123) 456-7890"
+
+var areaCode = phoneNumber.slice(0, 3);
+var prefix = phoneNumber.slice(3, 6);
+var lineNum = phoneNumber.slice(6, phoneNumber.length);
+areaCode = '(' + areaCode.join('') + ')';
+var scheme = prefix.join('') + '-' + lineNum.join('');
+phoneNumber = areaCode + scheme;
+
+document.getElementById("challenge-9").innerHTML = phoneNumber;
